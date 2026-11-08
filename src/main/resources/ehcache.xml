@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="false"
+         monitoring="autodetect"
+         dynamicConfig="true">
+
+    <diskStore path="java.io.tmpdir/mlia-capstone-ehcache"/>
+
+    <defaultCache
+            maxEntriesLocalHeap="1000"
+            eternal="false"
+            timeToIdleSeconds="300"
+            timeToLiveSeconds="600"
+            overflowToDisk="false"/>
+
+    <cache name="ma.toubkalit.mlia.model.Salle"
+           maxEntriesLocalHeap="500"
+           eternal="false"
+           timeToIdleSeconds="600"
+           timeToLiveSeconds="1200"
+           overflowToDisk="false"/>
+
+    <cache name="ma.toubkalit.mlia.model.Utilisateur"
+           maxEntriesLocalHeap="500"
+           eternal="false"
+           timeToIdleSeconds="600"
+           timeToLiveSeconds="1200"
+           overflowToDisk="false"/>
+
+    <cache name="ma.toubkalit.mlia.model.Equipement"
+           maxEntriesLocalHeap="500"
+           eternal="false"
+           timeToIdleSeconds="600"
+           timeToLiveSeconds="1200"
+           overflowToDisk="false"/>
+
+    <cache name="org.hibernate.cache.internal.StandardQueryCache"
+           maxEntriesLocalHeap="1000"
+           eternal="false"
+           timeToLiveSeconds="120"
+           overflowToDisk="false"/>
+
+    <cache name="org.hibernate.cache.spi.UpdateTimestampsCache"
+           maxEntriesLocalHeap="5000"
+           eternal="true"
+           overflowToDisk="false"/>
+</ehcache>
